@@ -1,1 +1,110 @@
 
+{
+  "theme": {
+    "bg": "#15101f",
+    "bg_alt": "#1f1830",
+    "text": "#f4eee6",
+    "text_muted": "#b9b0c6",
+    "accent": "#ff3d6e",
+    "button_text": "#ffffff",
+    "button_radius": "999px",
+    "button_style": "solid",
+    "heading_font": "Bricolage Grotesque",
+    "body_font": "Be Vietnam Pro"
+  },
+  "brand": {
+    "name": "Tên Chương Trình 2026",
+    "logo": "",
+    "favicon_text": "Tên Chương Trình 2026 – Fashion & Music Festival"
+  },
+  "nav": [
+    { "label": "Giới thiệu", "href": "#about" },
+    { "label": "Nghệ sĩ", "href": "#lineup" },
+    { "label": "Lịch trình", "href": "#schedule" },
+    { "label": "Đặt vé", "href": "#tickets" }
+  ],
+  "hero": {
+    "banner": "",
+    "title": "Fashion & Music Festival 2026",
+    "subtitle": "Hai đêm thời trang, âm nhạc và phong cách sống tại Thanh Hóa",
+    "countdown_target": "2026-08-29T16:00:00+07:00",
+    "cta_primary_label": "Mua vé ngay",
+    "cta_primary_url": "#tickets",
+    "cta_secondary_label": "Xem chương trình",
+    "cta_secondary_url": "#schedule"
+  },
+  "about": {
+    "heading": "Về chương trình",
+    "tagline": "Fashion – Music – Lifestyle",
+    "body": "Thay đoạn này bằng phần giới thiệu của đơn vị bạn: ý tưởng chương trình, địa điểm, thời gian và điều khán giả sẽ được trải nghiệm.",
+    "file_label": "Tải hồ sơ chương trình",
+    "file_url": ""
+  },
+  "lineup": {
+    "heading": "Nghệ sĩ",
+    "intro": "Những gương mặt sẽ góp mặt tại sự kiện",
+    "people": [
+      { "name": "Nghệ sĩ 1", "role": "Ca sĩ", "photo": "" },
+      { "name": "Nghệ sĩ 2", "role": "Ca sĩ", "photo": "" },
+      { "name": "Nghệ sĩ 3", "role": "Ca sĩ / Nhạc sĩ", "photo": "" }
+    ]
+  },
+  "logo_groups": [
+    { "heading": "Đơn vị đồng tổ chức", "items": [ { "name": "Đơn vị 1", "image": "", "url": "" } ] },
+    { "heading": "Đơn vị trình diễn", "items": [ { "name": "Đơn vị 2", "image": "", "url": "" } ] },
+    { "heading": "Đối tác & nhà tài trợ", "items": [ { "name": "Nhà tài trợ 1", "image": "", "url": "" }, { "name": "Nhà tài trợ 2", "image": "", "url": "" } ] }
+  ],
+  "schedule": {
+    "heading": "Lịch trình",
+    "intro": "2 ngày bùng nổ cảm xúc",
+    "days": [
+      {
+        "label": "Day 1",
+        "date": "29 tháng 8, 2026",
+        "items": [
+          { "time": "16:00", "title": "Đón khách & Red Carpet", "desc": "Giao lưu với nghệ sĩ và khách mời." },
+          { "time": "19:00", "title": "Fashion Show", "desc": "Trình diễn bộ sưu tập Xuân Hè 2026." },
+          { "time": "21:00", "title": "EDM & Rap Night", "desc": "Các set nhạc điện tử và biểu diễn rap." }
+        ]
+      },
+      {
+        "label": "Day 2",
+        "date": "30 tháng 8, 2026",
+        "items": [
+          { "time": "15:00", "title": "Brand Activation & Mini Games", "desc": "Trải nghiệm gian hàng và nhận quà từ nhà tài trợ." },
+          { "time": "19:30", "title": "Live Concert", "desc": "Đêm nhạc live cùng ban nhạc và các ca sĩ." },
+          { "time": "23:00", "title": "Fireworks & After Party", "desc": "Pháo hoa khép lại sự kiện." }
+        ]
+      }
+    ]
+  },
+  "tickets": {
+    "heading": "Hạng vé & ưu đãi",
+    "intro": "Chọn hạng vé phù hợp để vào không gian chương trình",
+    "map_label": "Xem sơ đồ chỗ ngồi",
+    "map_url": "#",
+    "tiers": [
+      { "code": "PRE", "name": "Premium", "price": "1.500.000 ₫", "note": "Khu ghế gần sân khấu nhất.", "color": "#E5304F", "button_label": "Chọn vé", "url": "#" },
+      { "code": "VIP", "name": "VIP", "price": "1.100.000 ₫", "note": "Tầm nhìn đẹp, khu vực ưu tiên.", "color": "#F2A33A", "button_label": "Chọn vé", "url": "#" },
+      { "code": "STD1", "name": "Standard 1", "price": "800.000 ₫", "note": "", "color": "#3FB8A6", "button_label": "Chọn vé", "url": "#" },
+      { "code": "STD2", "name": "Standard 2", "price": "500.000 ₫", "note": "", "color": "#5B8DEF", "button_label": "Chọn vé", "url": "#" },
+      { "code": "STD3", "name": "Standard 3", "price": "300.000 ₫", "note": "", "color": "#A78BFA", "button_label": "Chọn vé", "url": "#" }
+    ]
+  },
+  "footer": {
+    "about": "Sự kiện kết hợp thời trang, âm nhạc và phong cách sống.",
+    "socials": [
+      { "label": "Facebook", "url": "#" },
+      { "label": "Instagram", "url": "#" },
+      { "label": "TikTok", "url": "#" }
+    ],
+    "links": [
+      { "label": "Giới thiệu", "url": "#about" },
+      { "label": "Chính sách & quy định", "url": "#" }
+    ],
+    "address": "Địa chỉ tổ chức",
+    "phone": "0900 000 000",
+    "email": "email@donvi.vn",
+    "copyright": "© 2026 Tên đơn vị. All rights reserved."
+  }
+}
