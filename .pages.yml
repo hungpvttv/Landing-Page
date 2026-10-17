@@ -1,0 +1,174 @@
+media:
+  input: images
+  output: images
+  categories: [image]
+
+content:
+  - name: site
+    label: Nội dung landing page
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: theme
+        label: Giao diện (màu, font, nút)
+        type: object
+        fields:
+          - { name: bg, label: "Màu nền chính (mã hex, vd #15101f)", type: string }
+          - { name: bg_alt, label: "Màu nền phụ (các khối, thẻ)", type: string }
+          - { name: text, label: "Màu chữ", type: string }
+          - { name: text_muted, label: "Màu chữ phụ", type: string }
+          - { name: accent, label: "Màu nhấn (nút, điểm nổi bật)", type: string }
+          - { name: button_text, label: "Màu chữ trên nút", type: string }
+          - name: button_style
+            label: Kiểu nút chính
+            type: select
+            options:
+              values:
+                - { value: solid, label: Nền đặc }
+                - { value: outline, label: Chỉ viền }
+          - name: button_radius
+            label: Bo góc nút
+            type: select
+            options:
+              values:
+                - { value: 0px, label: Vuông }
+                - { value: 8px, label: Bo nhẹ }
+                - { value: 999px, label: Bo tròn hết }
+          - name: heading_font
+            label: Font tiêu đề
+            type: select
+            options:
+              values: [Bricolage Grotesque, Be Vietnam Pro, Montserrat, Playfair Display, Oswald, Lexend, Roboto]
+          - name: body_font
+            label: Font nội dung
+            type: select
+            options:
+              values: [Bricolage Grotesque, Be Vietnam Pro, Montserrat, Playfair Display, Oswald, Lexend, Roboto]
+      - name: brand
+        label: Thương hiệu
+        type: object
+        fields:
+          - { name: name, label: Tên chương trình, type: string }
+          - { name: logo, label: Logo (ảnh), type: image }
+          - { name: favicon_text, label: Tiêu đề tab trình duyệt, type: string }
+      - name: nav
+        label: Menu
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Tên mục, type: string }
+          - { name: href, label: "Liên kết (vd #about)", type: string }
+      - name: hero
+        label: Banner đầu trang
+        type: object
+        fields:
+          - { name: banner, label: Ảnh banner, type: image }
+          - { name: title, label: Tiêu đề lớn, type: string }
+          - { name: subtitle, label: Dòng phụ, type: string }
+          - { name: countdown_target, label: "Thời điểm đếm ngược (vd 2026-08-29T16:00:00+07:00)", type: string }
+          - { name: cta_primary_label, label: Nút chính - chữ, type: string }
+          - { name: cta_primary_url, label: Nút chính - liên kết, type: string }
+          - { name: cta_secondary_label, label: Nút phụ - chữ, type: string }
+          - { name: cta_secondary_url, label: Nút phụ - liên kết, type: string }
+      - name: about
+        label: Giới thiệu
+        type: object
+        fields:
+          - { name: heading, label: Tiêu đề, type: string }
+          - { name: tagline, label: Khẩu hiệu, type: string }
+          - { name: body, label: Nội dung, type: text }
+          - { name: file_label, label: Nút tải hồ sơ - chữ, type: string }
+          - { name: file_url, label: Nút tải hồ sơ - liên kết/PDF, type: string }
+      - name: lineup
+        label: Nghệ sĩ / Khách mời
+        type: object
+        fields:
+          - { name: heading, label: Tiêu đề mục, type: string }
+          - { name: intro, label: Mô tả ngắn, type: string }
+          - name: people
+            label: Danh sách
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Họ tên, type: string }
+              - { name: role, label: Vai trò, type: string }
+              - { name: photo, label: Ảnh, type: image }
+      - name: logo_groups
+        label: Nhóm logo (đồng tổ chức, trình diễn, tài trợ)
+        type: object
+        list: true
+        fields:
+          - { name: heading, label: Tiêu đề nhóm, type: string }
+          - name: items
+            label: Logo
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Tên đơn vị, type: string }
+              - { name: image, label: Logo, type: image }
+              - { name: url, label: Website (tuỳ chọn), type: string }
+      - name: schedule
+        label: Lịch trình
+        type: object
+        fields:
+          - { name: heading, label: Tiêu đề mục, type: string }
+          - { name: intro, label: Mô tả ngắn, type: string }
+          - name: days
+            label: Các ngày
+            type: object
+            list: true
+            fields:
+              - { name: label, label: Nhãn ngày (vd DAY 1), type: string }
+              - { name: date, label: Ngày hiển thị, type: string }
+              - name: items
+                label: Hoạt động
+                type: object
+                list: true
+                fields:
+                  - { name: time, label: Giờ, type: string }
+                  - { name: title, label: Tên hoạt động, type: string }
+                  - { name: desc, label: Mô tả, type: string }
+      - name: tickets
+        label: Hạng vé
+        type: object
+        fields:
+          - { name: heading, label: Tiêu đề mục, type: string }
+          - { name: intro, label: Mô tả ngắn, type: string }
+          - { name: map_label, label: Nút phụ - chữ, type: string }
+          - { name: map_url, label: Nút phụ - liên kết, type: string }
+          - name: tiers
+            label: Các hạng vé
+            type: object
+            list: true
+            fields:
+              - { name: code, label: Mã ngắn (vd VIP), type: string }
+              - { name: name, label: Tên hạng, type: string }
+              - { name: price, label: Giá hiển thị, type: string }
+              - { name: note, label: Ghi chú, type: string }
+              - { name: color, label: "Màu nhận diện (vd #E5304F)", type: string }
+              - { name: button_label, label: Chữ nút, type: string }
+              - { name: url, label: Liên kết mua vé, type: string }
+      - name: footer
+        label: Chân trang
+        type: object
+        fields:
+          - { name: about, label: Mô tả ngắn, type: text }
+          - name: socials
+            label: Mạng xã hội
+            type: object
+            list: true
+            fields:
+              - { name: label, label: Tên, type: string }
+              - { name: url, label: Liên kết, type: string }
+          - name: links
+            label: Liên kết thông tin
+            type: object
+            list: true
+            fields:
+              - { name: label, label: Tên, type: string }
+              - { name: url, label: Liên kết, type: string }
+          - { name: address, label: Địa chỉ, type: string }
+          - { name: phone, label: Điện thoại, type: string }
+          - { name: email, label: Email, type: string }
+          - { name: copyright, label: Bản quyền, type: string }
