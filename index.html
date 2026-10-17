@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Đang tải…</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+:root{--ink:#15101f;--ink2:#1f1830;--bone:#f4eee6;--mute:#b9b0c6;--hot:#ff3d6e;--btn-text:#fff;--radius:999px;--line:color-mix(in srgb,var(--bone) 14%,transparent);
+--display:'Bricolage Grotesque',system-ui,sans-serif;--body:'Be Vietnam Pro',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--ink);color:var(--bone);font:400 16px/1.65 var(--body)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--hot);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:88px 0}
+h2{font:800 clamp(30px,5vw,52px)/1.05 var(--display);letter-spacing:-.02em}
+.lead{color:var(--mute);margin-top:10px;max-width:60ch}
+.btn{display:inline-block;padding:13px 26px;border-radius:var(--radius);font-weight:700;border:2px solid var(--hot);transition:background .2s,color .2s}
+.btn.solid{background:var(--hot);color:var(--btn-text)}body.outline .btn.solid{background:transparent;color:var(--hot)}.btn.solid:hover,body.outline .btn.solid:hover{background:var(--bone);color:var(--ink);border-color:var(--bone)}
+.btn.ghost:hover{background:var(--hot);color:var(--btn-text)}
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--ink) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:24px;height:64px}
+.brand{font:800 18px var(--display);display:flex;align-items:center;gap:10px;margin-right:auto}
+.brand img{height:38px}
+nav{display:flex;gap:22px;font-size:14px;font-weight:500}
+nav a:hover{color:var(--hot)}
+header .btn{padding:8px 18px;font-size:14px}
+.hero{padding:0;position:relative;overflow:hidden;min-height:calc(100svh - 64px);display:grid;align-items:end}
+.hero .bg{position:absolute;inset:0;background:radial-gradient(900px 500px at 80% 10%,color-mix(in srgb,var(--hot) 30%,var(--ink)) 0,transparent 70%),radial-gradient(700px 500px at 0 100%,color-mix(in srgb,var(--hot) 45%,var(--ink)) 0,transparent 70%),var(--ink)}
+.hero .bg img{width:100%;height:100%;object-fit:cover;opacity:.45}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--ink) 4%,transparent 60%)}
+.hero .wrap{position:relative;padding-top:120px;padding-bottom:56px}
+.hero h1{font:800 clamp(44px,10vw,128px)/.92 var(--display);letter-spacing:-.035em;max-width:11ch}
+.hero p{color:var(--mute);font-size:19px;margin:18px 0 28px;max-width:46ch}
+.count{display:flex;gap:clamp(14px,3vw,36px);margin-bottom:32px}
+.count div{font:800 clamp(34px,6vw,64px)/1 var(--display);font-variant-numeric:tabular-nums}
+.count small{display:block;font:500 13px var(--body);color:var(--mute);margin-top:6px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+#about{background:var(--ink2)}
+#about h3{font:700 20px var(--display);color:var(--hot);margin:14px 0 18px}
+#about p{white-space:pre-line;max-width:68ch;margin-bottom:28px}
+.grid{display:grid;gap:22px;margin-top:40px}
+.people{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.person .ph{aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:linear-gradient(160deg,color-mix(in srgb,var(--hot) 25%,var(--ink)),color-mix(in srgb,var(--hot) 50%,var(--ink)))}
+.person img{width:100%;height:100%;object-fit:cover}
+.person h3{font:700 22px var(--display);margin-top:14px}
+.person p{color:var(--mute);font-size:14px}
+.logos h3{font:700 15px var(--body);color:var(--mute);margin:44px 0 16px}
+.logos .row{display:flex;flex-wrap:wrap;gap:14px}
+.logo{background:#fff;color:#15101f;border-radius:12px;height:76px;min-width:140px;padding:10px 18px;display:grid;place-items:center;font-weight:700;font-size:14px;text-align:center}
+.logo img{max-height:56px;max-width:140px;object-fit:contain}
+.days{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.day{border:1px solid var(--line);border-radius:18px;padding:28px;background:var(--ink2)}
+.day h3{font:800 32px var(--display)}
+.day .date{color:var(--hot);font-weight:700;margin-bottom:12px}
+.day ol{list-style:none;padding:0}
+.day li{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:16px 0;border-top:1px solid var(--line)}
+.day time{font:800 20px var(--display)}
+.day b{display:block}.day span{color:var(--mute);font-size:14px}
+.tiers{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.tier{border:1px solid var(--line);border-top:6px solid var(--c,var(--hot));border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:6px;background:var(--ink2)}
+.tier .code{font-weight:700;font-size:13px;color:var(--c)}
+.tier h3{font:800 24px var(--display)}
+.tier .price{font:800 26px var(--display)}
+.tier p{color:var(--mute);font-size:14px;flex:1}
+.tier .btn{text-align:center;margin-top:12px;padding:10px;border-color:var(--c);font-size:14px}
+.tier .btn:hover{background:var(--c);color:#fff}
+.more{margin-top:32px}
+footer{border-top:1px solid var(--line);padding:56px 0 32px;background:color-mix(in srgb,var(--ink) 70%,#000)}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px}
+footer h4{font:700 15px var(--display);margin-bottom:10px}
+footer li{list-style:none;color:var(--mute);font-size:14px;margin-bottom:6px}
+footer ul{padding:0}footer a:hover{color:var(--hot)}
+footer .copy{margin-top:40px;color:var(--mute);font-size:13px}
+.hide{display:none!important}
+@media(max-width:760px){nav{display:none}section{padding:64px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="#top" id="brand"></a><nav id="nav"></nav><a class="btn solid" id="navcta" href="#tickets"></a></div></header>
+<main id="top">
+<section class="hero"><div class="bg" id="herobg"></div><div class="wrap">
+<h1 id="h1"></h1><p id="sub"></p>
+<div class="count" id="count" aria-live="off"></div>
+<div class="cta"><a class="btn solid" id="c1"></a><a class="btn ghost" id="c2"></a></div></div></section>
+<section id="about"><div class="wrap"><h2 id="aH"></h2><h3 id="aT"></h3><p id="aB"></p><a class="btn ghost" id="aF"></a></div></section>
+<section id="lineup"><div class="wrap"><h2 id="lH"></h2><p class="lead" id="lI"></p><div class="grid people" id="people"></div></div></section>
+<section class="logos"><div class="wrap" id="logos"></div></section>
+<section id="schedule" style="background:var(--ink2)"><div class="wrap"><h2 id="sH"></h2><p class="lead" id="sI"></p><div class="grid days" id="days"></div></div></section>
+<section id="tickets"><div class="wrap"><h2 id="tH"></h2><p class="lead" id="tI"></p><div class="grid tiers" id="tiers"></div><a class="btn ghost more" id="tM"></a></div></section>
+</main>
+<footer><div class="wrap"><div class="cols" id="fcols"></div><p class="copy" id="fcopy"></p></div></footer>
+<script>
+const $=id=>document.getElementById(id);
+const el=(t,o={},kids=[])=>{const e=document.createElement(t);for(const k in o){if(k==='text')e.textContent=o[k];else if(k==='class')e.className=o[k];else e.setAttribute(k,o[k])}[].concat(kids).forEach(c=>e.append(c));return e};
+// Ảnh: bỏ dấu "/" đầu để chạy được cả khi host ở thư mục con của GitHub Pages
+const src=p=>!p?'':/^(https?:|data:)/.test(p)?p:p.replace(/^\/+/,'');
+const link=(a,label,url)=>{if(!label){a.classList.add('hide');return}a.textContent=label;a.href=url||'#'};
+const fill=(id,t)=>{const n=$(id);if(t)n.textContent=t;else n.classList.add('hide')};
+fetch('content/site.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{
+ const th=d.theme||{},rs=document.documentElement.style,set=(k,v)=>{if(v)rs.setProperty(k,v)};
+ set('--ink',th.bg);set('--ink2',th.bg_alt);set('--bone',th.text);set('--mute',th.text_muted);set('--hot',th.accent);set('--btn-text',th.button_text);set('--radius',th.button_radius);
+ if(th.button_style==='outline')document.body.classList.add('outline');
+ const hf=th.heading_font||'Bricolage Grotesque',bf=th.body_font||'Be Vietnam Pro';
+ set('--display',"'"+hf+"',system-ui,sans-serif");set('--body',"'"+bf+"',system-ui,sans-serif");
+ const fam=[...new Set([hf,bf])].map(f=>'family='+f.replace(/ /g,'+')+':wght@400;700').join('&');
+ document.head.append(el('link',{rel:'stylesheet',href:'https://fonts.googleapis.com/css2?'+fam+'&display=swap'}));
+ document.title=d.brand.favicon_text||d.brand.name;
+ const b=$('brand');
+ if(d.brand.logo)b.append(el('img',{src:src(d.brand.logo),alt:d.brand.name}));else b.textContent=d.brand.name;
+ d.nav.forEach(n=>$('nav').append(el('a',{href:n.href,text:n.label})));
+ link($('navcta'),d.hero.cta_primary_label,d.hero.cta_primary_url);
+ const h=d.hero;
+ if(h.banner)$('herobg').append(el('img',{src:src(h.banner),alt:''}));
+ $('h1').textContent=h.title;fill('sub',h.subtitle);
+ link($('c1'),h.cta_primary_label,h.cta_primary_url);link($('c2'),h.cta_secondary_label,h.cta_secondary_url);
+ // đếm ngược
+ const target=new Date(h.countdown_target).getTime();
+ const units=[['Ngày',86400],['Giờ',3600],['Phút',60],['Giây',1]];
+ const cells=units.map(u=>{const v=el('span',{text:'00'});const c=el('div',{},[v,el('small',{text:u[0]})]);$('count').append(c);return v});
+ if(isNaN(target))$('count').classList.add('hide');
+ else{const tick=()=>{let s=Math.max(0,Math.floor((target-Date.now())/1000));units.forEach((u,i)=>{const n=Math.floor(s/u[1]);s-=n*u[1];cells[i].textContent=String(n).padStart(2,'0')})};tick();setInterval(tick,1000)}
+ const a=d.about;$('aH').textContent=a.heading;fill('aT',a.tagline);fill('aB',a.body);link($('aF'),a.file_url&&a.file_label,a.file_url);
+ const l=d.lineup;$('lH').textContent=l.heading;fill('lI',l.intro);
+ l.people.forEach(p=>$('people').append(el('article',{class:'person'},[
+  el('div',{class:'ph'},p.photo?el('img',{src:src(p.photo),alt:p.name,loading:'lazy'}):[]),
+  el('h3',{text:p.name}),el('p',{text:p.role||''})])));
+ d.logo_groups.forEach(g=>{
+  $('logos').append(el('h3',{text:g.heading}));
+  const row=el('div',{class:'row'});
+  g.items.forEach(i=>{const inner=i.image?el('img',{src:src(i.image),alt:i.name,loading:'lazy'}):i.name;
+   const box=el(i.url?'a':'div',i.url?{class:'logo',href:i.url,target:'_blank',rel:'noopener'}:{class:'logo'},inner);row.append(box)});
+  $('logos').append(row)});
+ const s=d.schedule;$('sH').textContent=s.heading;fill('sI',s.intro);
+ s.days.forEach(day=>{const ol=el('ol');
+  day.items.forEach(i=>ol.append(el('li',{},[el('time',{text:i.time}),el('div',{},[el('b',{text:i.title}),el('span',{text:i.desc||''})])])));
+  $('days').append(el('article',{class:'day'},[el('h3',{text:day.label}),el('div',{class:'date',text:day.date}),ol]))});
+ const t=d.tickets;$('tH').textContent=t.heading;fill('tI',t.intro);link($('tM'),t.map_label,t.map_url);
+ t.tiers.forEach(x=>{const c=el('article',{class:'tier',style:'--c:'+(x.color||'#ff3d6e')},[
+  el('div',{class:'code',text:x.code}),el('h3',{text:x.name}),el('div',{class:'price',text:x.price}),el('p',{text:x.note||''}),
+  el('a',{class:'btn',href:x.url||'#',text:x.button_label||'Chọn vé'})]);$('tiers').append(c)});
+ const f=d.footer;
+ const col=(title,kids)=>el('div',{},[el('h4',{text:title}),el('ul',{},kids)]);
+ const li=(label,url)=>el('li',{},url?el('a',{href:url,text:label,target:url.startsWith('http')?'_blank':'_self',rel:'noopener'}):label);
+ $('fcols').append(el('div',{},[el('h4',{text:d.brand.name}),el('p',{class:'lead',text:f.about}),
+  el('ul',{style:'display:flex;gap:16px;margin-top:14px'},f.socials.map(x=>li(x.label,x.url)))]),
+  col('Thông tin',f.links.map(x=>li(x.label,x.url))),
+  col('Liên hệ',[f.address,f.phone,f.email].filter(Boolean).map(x=>li(x))));
+ $('fcopy').textContent=f.copyright;
+}).catch(e=>{document.body.prepend(el('p',{class:'wrap',text:'Không tải được content/site.json: '+e.message}))});
+</script>
+</body>
+</html>
