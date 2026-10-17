@@ -124,27 +124,6 @@
             "desc": "Tặng quà tri ân ca sĩ và người hâm mộ"
           }
         ]
-      },
-      {
-        "label": "Day 2",
-        "date": "30 tháng 8, 2026",
-        "items": [
-          {
-            "time": "15:00",
-            "title": "Brand Activation & Mini Games",
-            "desc": "Trải nghiệm gian hàng và nhận quà từ nhà tài trợ."
-          },
-          {
-            "time": "19:30",
-            "title": "Live Concert",
-            "desc": "Đêm nhạc live cùng ban nhạc và các ca sĩ."
-          },
-          {
-            "time": "23:00",
-            "title": "Fireworks & After Party",
-            "desc": "Pháo hoa khép lại sự kiện."
-          }
-        ]
       }
     ]
   },
@@ -199,7 +178,7 @@
     ]
   },
   "footer": {
-    "about": "Sự kiện kết hợp thời trang, âm nhạc và phong cách sống.",
+    "about": "Sự kiện âm nhạc",
     "socials": [
       {
         "label": "Facebook",
@@ -224,9 +203,9 @@
         "url": "#"
       }
     ],
-    "address": "Địa chỉ tổ chức",
+    "address": "Báo và Phát thanh, truyền hình Thanh Hóa - Đại lộ Hùng Vương, phường Hạc Thành, tỉnh Thanh Hóa",
     "phone": "0900 000 000",
-    "email": "email@donvi.vn",
-    "copyright": "© 2026 Tên đơn vị. All rights reserved."
+    "email": "contact@baothanhhoa.vn",
+    "copyright": "© 2026 Báo và Phát thanh, truyền hình Thanh Hóa. All rights reserved."
   }
 }
